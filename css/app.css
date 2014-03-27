@@ -1,0 +1,11 @@
+.icon-size{width:32px;height:32px}
+.task-item-button{margin:0px;padding:0px;border:none;width:32px;height:32px;position:absolute;top:50%;margin-top:-16px}
+.task-item-checkbox{width:32px;height:32px;margin:0}
+.task-item-checkbox-completed{text-decoration:line-through}
+.task-items{max-width:500px;margin:auto}
+.task-item{margin:10px;background-color:#235596;color:#fff;font-family:Arial,sans-serif;border-radius:5px;text-align:center}
+.task-item-inner{padding:10px;position:relative}
+.task-item-complete{left:10px}
+.task-item-title-inner{padding-left:42px;padding-right:42px}
+.task-item-delete{right:10px}
+.add-task-button{margin:10px;background-color:#235596;color:#fff;font-family:Arial,sans-serif;border-radius:5px;text-align:center}
