@@ -34,7 +34,7 @@
 }
 
 .task-item {
-	margin: 10px;
+	margin: 10px 0 10px 0;
 	background-color: @item-color; 
 	color: @item-text-color;
 	font-family: Arial, sans-serif;
@@ -67,6 +67,7 @@
 
 .task-item-delete {
 	right: @item-padding;
+	background-color: #235596;
 }
 
 .task-item-delete-inner {
@@ -74,7 +75,13 @@
 }
 
 .add-task-button {
-	margin: 10px;
+	max-width: 500px;
+	margin: auto;
+}
+
+.add-task-button-inner {
+	padding: @item-padding;
+	position: relative;
 	background-color: @item-color; 
 	color: @item-text-color;
 	font-family: Arial, sans-serif;
@@ -82,20 +89,27 @@
 	text-align: center;
 }
 
-.add-task-button-inner {
-
-}
-
-.add-task-button-input {
-
+.add-task-button-input { //less not working - come back to!
+	max-width: 438px;
+	position: relative;
+	right: 10px;
+	left: 10px;
+	
 }
 
 .add-task-button-input-inner {
-
+	width:90%;
 }
 
 .add-task-add-button {
-
+	margin:0px;
+	padding:0px;
+	border:none;
+	.icon-size;
+	position: absolute;
+	top: 50%;
+	margin-top: -(@icon-size/2);
+	right: @item-padding;
 }
 
 .add-task-add-button-inner {
