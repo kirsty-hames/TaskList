@@ -2,19 +2,20 @@ define(function(require) {
 	//defined files needed to run this file
 	//set variables for files
 	var Backbone = require('backbone');
-
 	var ItemModel = require('js/itemModel');
 
-	var LocalStorage = require('localStorage');
-
-	//object extension of backbone
 	var ItemCollection = Backbone.Collection.extend({
 
-		//model attribute of ItemModel is set to collection
 		model: ItemModel,
+		//console.log initialize to see if view returns ItemCollection
+		initialize: function() {
+			console.log('item collection init', this);
+			this.listenTo(this, 'destroy', this.modelWasDestoryed)
+		},
 
-		localStorage: new Backbone.LocalStorage("tasks")
-
+		modelWasDestoryed: function() {
+			console.log(this);
+		}
 	});
 
 	return ItemCollection;

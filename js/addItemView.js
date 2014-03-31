@@ -2,14 +2,7 @@ define(function(require) {
 
 	var Backbone = require('backbone');
 
-	var Hub = require('js/hub');
-
 	var AddItemView = Backbone.View.extend({
-
-		events: {
-			"click .add-task-add-button": "addItem",
-			"keydown .add-task-button-input-inner": "enterKey"
-		},
 
 		initialize: function() {
 			console.log('add item view init');
@@ -29,24 +22,6 @@ define(function(require) {
 			this.$el.html(template()).appendTo('.add-task-button');
 
 			return this;
-		},
-
-		enterKey: function(event) {
-			if (event.keyCode === 13) {
-				event.preventDefault();
-				this.addItem();
-			}
-		},
-
-		addItem: function() {
-			var inputValue = this.$('.add-task-button-input-inner').val();
-			console.log(inputValue);
-			if (inputValue.length > 0) {
-				Hub.trigger('addItem', inputValue);
-				this.$('.add-task-button-input-inner').val('');
-				
-			};
-			
 		}
 
 	});

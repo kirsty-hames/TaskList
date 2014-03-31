@@ -5,8 +5,7 @@ require.config({
         backbone: 'js/libraries/backbone',
         modernizr: 'js/libraries/modernizr',
         handlebars: 'js/libraries/handlebars',
-        templates: 'templates/templates',
-        localStorage: 'js/libraries/backbone.localStorage'
+        templates: 'templates/templates'
     },
     shim: {
         jquery: [
