@@ -6,10 +6,12 @@ define(function(require) {
 
 	var ClearItemView = Backbone.View.extend({
 
+		tagName: "button",
+
 		className: "clear-completed-tasks-button",
 
 		events: {
-			"click .clear-completed-tasks-button": "clearItems"
+			"click": "clearItems"
 		},
 
 		initialize: function() {
