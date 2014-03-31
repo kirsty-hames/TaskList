@@ -5,18 +5,19 @@
 .task-title-logo{border:3px solid #323232;border-radius:25px;padding:5px}
 .task-item-button{margin:0px;padding:0px;border:none;width:32px;height:32px;position:absolute;top:50%;margin-top:-16px}
 .task-item-checkbox{width:32px;height:32px;margin:0}
+.task-item-checkbox:hover{cursor:pointer}
 .task-item-checkbox-completed{text-decoration:line-through;color:#b92a1a}
 .task-item{margin:10px 0 10px 0;background-color:#fff}
 .task-item-inner{padding:10px;position:relative}
 .task-item-complete{left:10px}
 .task-item-title-inner{padding-left:42px;padding-right:42px;font-family:'Amatic SC',cursive;font-size:24px}
 .task-item-delete{right:10px;background-color:#fff}
-.task-item-delete-inner:hover{color:#b92a1a}
+.task-item-delete-inner:hover{color:#b92a1a;cursor:pointer}
 .add-task-button{max-width:500px;margin-bottom:10px}
 .add-task-button-inner{padding:10px;position:relative;text-align:center}
 .add-task-button-input{max-width:438px;position:relative;right:10px;left:10px;color:#fff}
 .add-task-add-button{margin:0px;padding:0px;border:none;width:32px;height:32px;position:absolute;top:50%;margin-top:-16px;right:10px}
-.add-task-add-button:hover{color:#31b3d1}
+.add-task-add-button:hover{color:#31b3d1;cursor:pointer}
 
 @font-face{font-family:'icomoon';src:url('fonts/icomoon.eot?edggxm');src:url('fonts/icomoon.eot?#iefixedggxm') format('embedded-opentype'),url('fonts/icomoon.woff?edggxm') format('woff'),url('fonts/icomoon.ttf?edggxm') format('truetype'),url('fonts/icomoon.svg?edggxm#icomoon') format('svg');font-weight:normal;font-style:normal}[class^="icon-"],[class*=" icon-"]{font-family:'icomoon';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .icon{display:inline-block;width:24px;height:24px;font-size:24px;background-color:#fff;color:#323232}
