@@ -1,60 +1,70 @@
 define(function (require) {
-
+	//defined files needed to run this file
+	//set variables for files
 	var Backbone = require ('backbone');
 
+	var Hub = require('js/hub');
+	//object extension of backbone
 	var ItemView = Backbone.View.extend({
-
+		//className attribute of task-item is set to view
 		className: "task-item",
 
+		//event attributes set to view
 		events: {
 			"click .task-item-delete": "removeItem",
 			"change .task-item-checkbox": "checkItem"
 		},
 
 		initialize: function() {
-			console.log('item view init');
-			this.listenTo(this.model, 'change:_isComplete', this.modelUpdated)
+			//view listens for when model is updated
+			//view listens to hub for when model is removed
+			//call render method
+			this.listenTo(this.model, 'change', this.modelUpdated);
+			this.listenTo(Hub, 'remove', this.remove);
 			this.render();
 		},
 
 		render: function() {
-			console.log('view should render model data');
 			//get model data and store it in data
 			var data = this.model.toJSON();
-
+			console.log(this.model.get('_isComplete'));
 			//get handlebars template and store it in template
 			var template = Handlebars.templates['item'];
 
-			//this.$el is the current ItemView element
-			//put the template with data into element
+			//this element is the current view element
+			//put the template with data into this view element
 			this.$el.html(template(data)).appendTo('.task-items');
 
 			return this;
 
 		},
 
-		//removeItem event created
+		//removeItem method created
 		removeItem: function() {
+			//this model is destroyed and removed from the collection 
 			this.model.destroy();
 			this.remove();
 		},
 
-		//checkItem event created
+		//checkItem method created
 		checkItem: function() {
+			//get this models attribute
+			//if this models attribute value is false
+			//remove 'task-item-checkbox-completed' class from this views object with a class of 'task-item-inner'  
 			if(this.model.get('_isComplete')) {
 				this.model.set('_isComplete', false);
-				this.$el.removeClass('task-item-checkbox-completed');
-				console.log('if statement true so class removed');
+				this.$('.task-item-inner').removeClass('task-item-checkbox-completed');
 
 			} else {
+				//else if this models attribute value is true
+				//add class 'task-item-checkbox-completed' to this views object with a class of 'task-item-inner' 
 				this.model.set('_isComplete', true);
-				this.$el.addClass('task-item-checkbox-completed');
-				console.log('if statement false so class added')
+				this.$('.task-item-inner').addClass('task-item-checkbox-completed');
 			}
 		},
 
 		modelUpdated: function() {
-			console.log('model updated to complete', this.model.get('_isComplete'));
+			this.model.save();
 		}
 
 	});
@@ -62,6 +72,3 @@ define(function (require) {
 	return ItemView;
 
 });
-//toggle checkItem function
-//this.$el.toggleClass('task-item-checkbox-completed');
-			//console.log('task completed');
