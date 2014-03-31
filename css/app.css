@@ -15,9 +15,9 @@
 .task-item-delete-inner:hover{color:#b92a1a;cursor:pointer}
 .add-task-button{max-width:500px;margin-bottom:10px}
 .add-task-button-inner{padding:10px;position:relative;text-align:center}
-.add-task-button-input{max-width:438px;position:relative;right:10px;left:10px;color:#fff}
-.add-task-button-input-inner{width:90%}
-.add-task-add-button{margin:0px;padding:0px;border:none;width:32px;height:32px;position:absolute;top:50%;margin-top:-16px;right:10px}
+.add-task-button-input{color:#fff;display:block;padding-right:42px}
+.add-task-button-input-inner{width:100%;margin:0;padding:4px 0 4px 0}
+.add-task-add-button{margin:0px;padding:0px;border:none;width:32px;height:32px;position:absolute;top:50%;margin-top:-16px;right:10px;display:block}
 .add-task-add-button:hover{color:#31b3d1;cursor:pointer}
 .clear-completed-tasks-button-holder{max-width:500px;position:relative}
 .clear-completed-tasks-button{width:100%;height:24px;font-size:12px;color:#fff;margin:0;border:0;text-align:left;background-color:#323232;padding:5px}
