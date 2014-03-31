@@ -16,7 +16,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"clear-completed-tasks-button-holder-inner\">\n	<button class=\"clear-completed-tasks-button\">clear completed tasks</button>\n</div>";
+  return "<div class=\"clear-completed-tasks-button-inner\">\n	<span class=\"icon-cancel-circle\"></span>\n	<span class=\"clear-text\">clear completed tasks</span>\n</div>";
   });
 
 this["Handlebars"]["templates"]["item"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

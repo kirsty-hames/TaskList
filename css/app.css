@@ -19,7 +19,10 @@
 .add-task-button-input-inner{width:90%}
 .add-task-add-button{margin:0px;padding:0px;border:none;width:32px;height:32px;position:absolute;top:50%;margin-top:-16px;right:10px}
 .add-task-add-button:hover{color:#31b3d1;cursor:pointer}
-.clear-completed-tasks-button-holder{margin:10px}
+.clear-completed-tasks-button-holder{max-width:500px;position:relative}
+.clear-completed-tasks-button{width:100%;height:24px;font-size:12px;color:#fff;margin:0;border:0;text-align:left;background-color:#323232;padding:5px}
+.clear-completed-tasks-button:hover{cursor:pointer;background-color:#31b3d1}
+.clear-text{font-size:18px;font-family:'Amatic SC',cursive;color:#fff;background-color:transparent;position:absolute;top:0px;left:24px}
 
 @font-face{font-family:'icomoon';src:url('fonts/icomoon.eot?edggxm');src:url('fonts/icomoon.eot?#iefixedggxm') format('embedded-opentype'),url('fonts/icomoon.woff?edggxm') format('woff'),url('fonts/icomoon.ttf?edggxm') format('truetype'),url('fonts/icomoon.svg?edggxm#icomoon') format('svg');font-weight:normal;font-style:normal}[class^="icon-"],[class*=" icon-"]{font-family:'icomoon';speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .icon{display:inline-block;width:24px;height:24px;font-size:24px;background-color:#fff;color:#323232}
