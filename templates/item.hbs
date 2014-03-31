@@ -1,7 +1,8 @@
 <div class="task-item-inner {{#if _isComplete}}task-item-checkbox-completed{{/if}}">
 		
 	<form class="task-item-complete task-item-button">
-		<input {{#if _isComplete}}checked{{/if}} type="checkbox" name="task" value="complete" class="task-item-complete-inner task-item-checkbox">
+		<input id="{{id}}" {{#if _isComplete}}checked{{/if}} type="checkbox" name="task" value="complete" class="task-item-complete-inner task-item-checkbox"/>
+		<label for="{{id}}" class="icon-checkmark2 icon"></label>
 	</form>
 
 	<div class="task-item-title">
