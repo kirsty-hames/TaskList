@@ -46,8 +46,7 @@ define(function(require) {
 			if (inputValue.length > 0) {
 				Hub.trigger('addItem', inputValue);
 				this.$('.add-task-button-input-inner').val('');
-				
-			};
+			}
 			
 		}
 

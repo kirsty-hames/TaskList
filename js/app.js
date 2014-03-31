@@ -67,5 +67,18 @@ require([
     	Hub.trigger('remove');
 
     	renderCollection();
-    })
+    });
+    	
+    function setupTimer() {
+     	setTimeout(function(){
+	    	var answer = confirm("Have you checked your to do list? Click OK if you wish to continue your alert");
+	    	if (answer) {
+	    		console.log('clicked ok');
+	    		setupTimer();
+	    	}
+	    }, 3000/* * 60 * 60*/);
+    };
+
+     //setupTimer();
+
 });
