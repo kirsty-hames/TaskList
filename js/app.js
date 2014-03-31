@@ -5,8 +5,9 @@ require([
 	'js/hub',
 	'js/itemView',
 	'js/itemCollection',
-	'js/addItemView'
-], function (Handlebars, templates, Hub, ItemView, ItemCollection, AddItemView) {
+	'js/addItemView',
+	'js/clearItemsView'
+], function (Handlebars, templates, Hub, ItemView, ItemCollection, AddItemView, ClearItemsView) {
 
 	//data stored as items
 	/*var items = [
@@ -29,6 +30,8 @@ require([
 
 	//new view created for when items 
 	new AddItemView();
+	//new view created for when completed tasks are removed
+	new ClearItemsView();
 
 	//renderCollection method created
 	//for each item in the collection create a new ItemView 
@@ -48,6 +51,21 @@ require([
     Hub.on('addItem', function(inputValue) {
     	Items.push({"title": inputValue});
     	Hub.trigger('remove');
+    	renderCollection();
+    })
+
+    Hub.on('clearCompletedItems', function() {
+    	var completedItems = Items.where({
+    		"_isComplete": true
+    	});
+
+    	console.log(completedItems);
+    	_.each(completedItems, function(completedModel) {
+    		completedModel.destroy();
+    	})
+
+    	Hub.trigger('remove');
+
     	renderCollection();
     })
 });

@@ -6,6 +6,8 @@ define(function(require) {
 
 	var AddItemView = Backbone.View.extend({
 
+		className: "add-task-button",
+
 		events: {
 			"click .add-task-add-button": "addItem",
 			"keydown .add-task-button-input-inner": "enterKey"
@@ -26,7 +28,7 @@ define(function(require) {
 
 			//this.$el is the current AddItemView DOM element
 			//put the template with the date into the element
-			this.$el.html(template()).appendTo('.add-task-button');
+			this.$el.html(template()).appendTo('.add-task-button-holder');
 
 			return this;
 		},
