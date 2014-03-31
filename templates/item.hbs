@@ -1,18 +1,18 @@
-<div class="task-item-inner">
+<div class="task-item-inner {{#if _isComplete}}task-item-checkbox-completed{{/if}}">
 		
 	<form class="task-item-complete task-item-button">
-		<input type="checkbox" name="task" value="complete" class="task-item-complete-inner task-item-checkbox">
+		<input {{#if _isComplete}}checked{{/if}} type="checkbox" name="task" value="complete" class="task-item-complete-inner task-item-checkbox">
 	</form>
- 			{{#if _isComplete}}{{else}}{{/if}}
 
 	<div class="task-item-title">
 		<div class="task-item-title-inner">
-			Title: {{{title}}}
+			{{{title}}}
 		</div>
 	</div>
 	
 	<button class="task-item-delete task-item-button">
-		<span class="task-item-delete-inner"></span>
+		<span class="task-item-delete-inner icon-remove icon"></span>
 	</button> 
 
 </div>
+<hr>
