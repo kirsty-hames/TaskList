@@ -7,7 +7,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"add-task-button-inner\">\n\n	<form class=\"add-task-button-input\">\n		<input type=\"text\" name=\"task\" class=\"add-task-button-input-inner\">\n	</form>\n	\n	<button class=\"add-task-add-button icon-pencil icon\">\n		<span class=\"add-task-add-button-inner\"></span>\n	</button> \n\n</div>";
+  return "<div class=\"add-task-button-inner\">\n\n	<form class=\"add-task-button-input\">\n		<input type=\"text\" name=\"task\" class=\"add-task-button-input-inner\"/>\n	</form>\n	\n	<button class=\"add-task-add-button icon-pencil icon\">\n		<span class=\"add-task-add-button-inner\"></span>\n	</button> \n\n</div>";
   });
 
 this["Handlebars"]["templates"]["clearItems"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
