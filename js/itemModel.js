@@ -1,15 +1,21 @@
 define(function(require) {
-
+	//defined files needed to run this file
+	//set variables for files
 	var Backbone = require('backbone');
 
+	//object extension of backbone
 	var ItemModel = Backbone.Model.extend({
 
-		initialize: function() {
-			console.log('item model init');
-		},
-
+		//default attribute set on model
+		//models are set to false by default
 		defaults: {
 			"_isComplete":false
+		},
+
+		initialize: function() {
+			this.save({silent: true});
+			this.listenTo(this, "change", this.save);
+			this.listenTo(this, "destroy", this.sync);
 		}
 	});
 
