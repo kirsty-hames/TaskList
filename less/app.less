@@ -177,4 +177,20 @@
 	left: 24px;
 }
 
-
+.icon-checkmark2 {
+	cursor: pointer;
+	position: absolute;
+	top: 6px;
+	.task-item-checkbox-completed & {
+		color: #b92a1a;
+		&:before {
+			content: "\e617";
+		}
+		&:hover {
+			color: darken(#b92a1a, 30%);
+		}
+	}
+	&:hover {
+		color: #31b3d1;
+	}
+}
