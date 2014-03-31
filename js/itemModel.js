@@ -14,7 +14,6 @@ define(function(require) {
 
 		initialize: function() {
 			this.save({silent: true});
-			this.listenTo(this, "change", this.save);
 			this.listenTo(this, "destroy", this.sync);
 		}
 	});

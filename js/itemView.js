@@ -19,7 +19,7 @@ define(function (require) {
 			//view listens for when model is updated
 			//view listens to hub for when model is removed
 			//call render method
-			this.listenTo(this.model, 'change:_isComplete', this.modelUpdated);
+			this.listenTo(this.model, 'change', this.modelUpdated);
 			this.listenTo(Hub, 'remove', this.remove);
 			this.render();
 		},
@@ -27,7 +27,7 @@ define(function (require) {
 		render: function() {
 			//get model data and store it in data
 			var data = this.model.toJSON();
-
+			console.log(this.model.get('_isComplete'));
 			//get handlebars template and store it in template
 			var template = Handlebars.templates['item'];
 
@@ -62,6 +62,10 @@ define(function (require) {
 				this.$('.task-item-inner').addClass('task-item-checkbox-completed');
 			}
 		},
+
+		modelUpdated: function() {
+			this.model.save();
+		}
 
 	});
 
