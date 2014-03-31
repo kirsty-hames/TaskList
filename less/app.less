@@ -1,13 +1,46 @@
-@item-color:#235596;
-@item-text-color:#fff;
+@item-color:#fff;
+@item-text-color:#323232;
 @item-border-radius: 5px;
 @icon-size: 32px;
 @item-padding: 10px;
+@font-family: 'Amatic SC', cursive;
+
 
 .icon-size {
 	width: @icon-size;
 	height: @icon-size;
+} 
+
+
+#wrapper {
+	border: 1px solid @item-text-color;
+	max-width: 500px;
+	margin: auto;
+	box-shadow: 10px 10px 5px #888888;
 }
+
+
+//to do list title 
+
+.task-title-block {
+	margin: 10px;
+	text-align: center;
+}
+
+.task-title {
+	font-family: @font-family;
+	font-size: 32px;
+	margin-bottom: 10px;
+}
+
+.task-title-logo {
+	border: 3px solid @item-text-color;
+	border-radius: 25px;
+	padding: 5px;
+}
+
+
+//task items
 
 .task-item-button {
 	margin:0px;
@@ -26,20 +59,12 @@
 
 .task-item-checkbox-completed {
 	text-decoration: line-through;
-}
-
-.task-items {
-	max-width: 500px;
-	margin: auto;
+	color: #b92a1a;
 }
 
 .task-item {
 	margin: 10px 0 10px 0;
 	background-color: @item-color; 
-	color: @item-text-color;
-	font-family: Arial, sans-serif;
-	border-radius: @item-border-radius;
-	text-align: center;
 }
 
 .task-item-inner {
@@ -51,54 +76,43 @@
 	left: @item-padding;
 }
 
-.task-item-complete-inner {
-
-
-}
-
-.task-item-title {
-	
-}
-
 .task-item-title-inner {
 	padding-left: @icon-size + @item-padding;
 	padding-right: @icon-size + @item-padding;
+	font-family: @font-family;
+	font-size: 24px;
 }
 
 .task-item-delete {
 	right: @item-padding;
-	background-color: #235596;
+	background-color: @item-color;
 }
 
-.task-item-delete-inner {
-	
+
+.task-item-delete-inner:hover {
+	color: #b92a1a;
 }
+
+
+//add item
 
 .add-task-button {
 	max-width: 500px;
-	margin: auto;
+	margin-bottom: 10px;
 }
 
 .add-task-button-inner {
 	padding: @item-padding;
-	position: relative;
-	background-color: @item-color; 
-	color: @item-text-color;
-	font-family: Arial, sans-serif;
-	border-radius: @item-border-radius;
+	position: relative; 
 	text-align: center;
 }
 
-.add-task-button-input { //less not working - come back to!
+.add-task-button-input { 
 	max-width: 438px;
 	position: relative;
 	right: 10px;
 	left: 10px;
-	
-}
-
-.add-task-button-input-inner {
-	width:90%;
+	color: @item-color;	
 }
 
 .add-task-add-button {
@@ -112,6 +126,10 @@
 	right: @item-padding;
 }
 
-.add-task-add-button-inner {
-	
+
+.add-task-add-button:hover {
+	color: #31b3d1;
 }
+
+
+
